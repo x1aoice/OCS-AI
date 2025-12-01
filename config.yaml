@@ -1,0 +1,14 @@
+﻿port: 8080  # 服务端口
+is_lan: true  # 是否允许局域网访问
+model: deepseek-chat  # 填写模型 ID，例如 deepseek-chat 或其他兼容模型
+base_url: https://api.deepseek.com/v1  # 对应模型的 base_url（OpenAI 兼容）
+api_key: sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx  
+internet_search: false  # 是否启用联网搜索
+db_cache: false  # 是否启用答案缓存
+system_prompt: >  # 系统提示词
+  只允许输出 JSON 结果 {"answer":"..."}，禁止 Markdown 或额外内容。
+  单选/多选题的选项内容必须直接输出，不输出选项字母，多个答案使用 # 连接。
+  判断题只能输出"正确"或"错误"文字。如果为英语对错题，请输出 "True"/"False"。
+  如题目涉及原因、原理、说明或解析，请简要阐述理由，至少两句话。
+
+
